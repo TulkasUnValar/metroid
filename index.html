@@ -1,0 +1,73 @@
+<!--Mauricio Quiñones (Tulkas)-->
+<!DOCTYPE html> <!--Andamio or scaffold-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>METROID</title>
+  <link rel="stylesheet" href="./styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+</head>
+<body>
+  <section id="fighter-select">
+    <h1 class="title">METROID</h1>
+        
+    <h2 class="subtitle">SELECT FIGHTER</h2>
+    
+    <div id="cards-container"  class="block-cards">
+    </div>
+    
+    <!--In the button the id is used to call in css and js-->
+    <button id="select-buttom">CONTINUE</button>
+  </section>
+
+  <section id="view-map">
+    <h2 class="subtitle">MAP</h2>
+    <canvas id="map"></canvas>
+    <!--onClick: press once, one action. 
+    onmousedown: hold down.
+    onmouseup: when you release is stops executing.-->
+    <button onmouseup="stopMove()" onmousedown="moveUp()">&#8593;</button>
+    <div>
+      <button onmouseup="stopMove()" onmousedown="moveLeft()">&#8592;</button>
+      <button onmouseup="stopMove()" onmousedown="moveRight()">&#8594;</button>
+    </div> 
+    <button onmouseup="stopMove()" onmousedown="moveDown()">&#8595;</button> 
+  </section>
+
+  <section id="attack-select">
+    <h1 class="title">METROID</h1>
+    
+    <h2 class="subtitle">SELECT ATTACK</h2> 
+    
+    <div id="attacks-container" class="beam-card">
+      <!--BEAM like label-->
+      <button id="beam-label">BEAM</button>
+    </div>
+
+    <div>
+      <section  id="message">
+        <p id="result">LET´S ROCK</p>
+      </section>
+        
+      <section id="restart">
+        <button id="restart-bottom">RESTART</button>
+      </section>
+    </div>
+
+    <div class="attack">
+      <div class="player-attacks">
+        <p id="player-life"> 0 </p>
+        <p id="player-fighter"></p>
+        <div id="player-attack"></div>
+      </div>
+      <div class="enemy-attacks">
+        <p id="enemy-life"> 0 </p>
+        <p id="enemy-fighter"></p>
+        <div id="enemy-attack"></div>
+      </div>
+    </div>
+  </section>
+  <!--Link js-->
+  <script src="./js/metroid.js"></script>
+</body>
+</html>
